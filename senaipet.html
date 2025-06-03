@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <H2>SenaiPet</H2>
+    <p id="pet1"></p>
+     <p id="pet2"></p>
+      <p id="pet3"></p>
+       <p id="pet4"></p>
+
+    <script>
+        let pets = [
+            { nome: "Meg", idade: 5, tipo: "Cachorro", idadeHumana: function() { return this.idade * 7; },fala: function() { return "Au Au"; } },
+            { nome: "Luna", idade: 2, tipo: "Gato", idadeHumana: function() { return this.idade * 6; },fala: function() { return "Miau"; } },
+            { nome: "Beto", idade: 1, tipo: "Pássaro", idadeHumana: function() { return this.idade * 5; },fala: function() { return "bru bru"; } },
+            { nome: "Fifi", idade: 3, tipo: "Coelho", idadeHumana: function() { return this.idade * 5; },fala: function() { return "Toc Toc"; } }
+        ];
+
+        console.log("Nome: " + pets[0].nome + ", Idade: " + pets[0].idade + ", Tipo: " + pets[0].tipo + ", Idade Humana: " + pets[0].idadeHumana() + " anos, Falando: " + pets[0].fala());
+         console.log("Nome: " + pets[1].nome + ", Idade: " + pets[1].idade + ", Tipo: " + pets[1].tipo + ", Idade Humana: " + pets[1].idadeHumana() + " anos, Falando: " + pets[1].fala());
+          console.log("Nome: " + pets[2].nome + ", Idade: " + pets[2].idade + ", Tipo: " + pets[2].tipo + ", Idade Humana: " + pets[2].idadeHumana() + " anos, Falando: " + pets[2].fala());
+           console.log("Nome: " + pets[3].nome + ", Idade: " + pets[3].idade + ", Tipo: " + pets[3].tipo + ", Idade Humana: " + pets[3].idadeHumana() + " anos, Falando: " + pets[3].fala());
+             
+        let petEncontrado = pets.find(pet => pet.nome === "Meg");
+        if (petEncontrado) {
+            console.log("pet encontrado: Nome: " + petEncontrado.nome + ", Idade: " + petEncontrado.idade + ", Espécie: " + petEncontrado.tipo);
+        }
+
+        
+    </script>
+</body>
+</html> 
